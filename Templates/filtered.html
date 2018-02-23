@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Filtered</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type=text/javascript src="{{
+  url_for('static', filename='jquery.js') }}"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    button{
+    
+    margin 200;
+    
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+    #ac{
+    	background-color:green;
+    }
+    #rj{
+    	background-color:red;
+    }
+  </style>
+
+
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    
+
+
+<div class="col-sm-9">
+<div class="container">
+  <h2></h2>
+  <p>your filtered details are</p>            
+  
+  <table class="table table-bordered" id="tavle">
+    <thead>
+      <th>tweetid</th>
+      <th>userid</th>
+      <th>tweet</Th>
+         <th>retweet count</th>
+          <th>favorite count</th>
+          <th>followers count</th>
+          <th>date</th>
+    </thead>
+    <tbody>
+    	{% for tweet in rows %}
+      <tr>
+       <td>{{tweet["id"]}}</td>
+       <td>{{tweet["user"]["id"]}}</td>
+       <td>{{tweet["text"]}}</td> 
+       
+       <td>{{tweet["retweet_count"]}}</td>
+       
+       <td>{{tweet["favorite_count"]}}</td>
+
+        <td>{{tweet["date"]}}</span> </td>
+        <td>{{tweet["user"]["followers_count"]}}</td>
+      </tr>
+      	{% endfor %}
+   </tbody>
+   
+  </table>
+  
+
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

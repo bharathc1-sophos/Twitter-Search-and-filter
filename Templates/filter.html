@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head> Filter </head>
+	<form action="/filter" method="POST">
+		<input name="keyword" type="text"  placeholder="keyword"/><br/>
+        From
+        <input name="since" type="date"  placeholder="since"/>
+        To
+        <input name="till" type="date"  placeholder="till"/><br/>
+		<input name="retweet_count" type="text"  placeholder="retweet count"/>
+        <select name="retweet_opr" >
+			<option value="lt"><</option>
+			<option value="lte"><=</option>
+            <option value="gt">></option>
+            <option value="gte">>=</option>
+        </select><br/> 
+        <input name="favorite_count" type="text"  placeholder="favorite count"/>
+        <select name="favorite_opr" >
+			<option value="lt"><</option>
+			<option value="lte"><=</option>
+            <option value="gt">></option>
+            <option value="gte">>=</option>
+        </select><br/>
+        <input name="follower_count" type="text"  placeholder="follower count"/>
+        <select name="follower_opr" >
+			<option value="lt"><</option>
+			<option value="lte"><=</option>
+            <option value="gt">></option>
+            <option value="gte">>=</option>
+        </select><br/>   
+        <input name="sort" type="text"  placeholder="sort on"/>
+		<select name="order" >
+			<option value="1">high to low</option>
+			<option value="-1">low to high</option>
+        </select><br/>    
+		<input type="submit" value="filter"/>
+	</form>
+</html>
