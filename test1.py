@@ -11,7 +11,7 @@ def tweetprint(tweets):
         print (hashtags)
 
         
-def filterr(retweet_count=None,favorite_count=None,follower_count=None,since=None,retweet_opr=None,favorite_opr=None,follower_opr=None,till=None,keyword=None,sort=None,Order=1,CSV=False):
+def filterr(retweet_count=None,favorite_count=None,follower_count=None,since=None,retweet_opr=None,favorite_opr=None,follower_opr=None,till=None,keyword=None,sort=None,Order=1):
     MONGO_DB="twit"
     MONGO_USER="bharath1"
     MONGO_PASS="bharath1"
@@ -146,7 +146,7 @@ for line in tweets_file:
 
 print("data stored successfully")
 k=input("press any key to continue")
-tweets=filterr(sort="user.screen_name",keyword="India",CSV=True)
+tweets=filterr(sort="user.screen_name",keyword="India")
 
 tweetprint(tweets)
 
