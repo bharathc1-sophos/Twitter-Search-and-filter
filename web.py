@@ -7,11 +7,20 @@ app=Flask(__name__)
 def filtering():
     if request.method=="POST":
         keyword=request.form["keyword"]
-        rc=int(request.form['retweet_count'])
+        try:
+            rc=int(request.form['retweet_count'])
+        except:
+            rc=None
         rc_opr=request.form['retweet_opr']
-        fc=int(request.form['favorite_count'])
+        try:
+            fc=int(request.form['favorite_count'])
+        except:
+            fc=None    
         fc_opr=request.form['favorite_opr']
-        flc=int(request.form['follower_count'])
+        try:
+            flc=int(request.form['follower_count'])
+        except
+            flc=None
         flc_opr=request.form['follower_opr']
         sort=request.form["sort"]
         if sort=="":
