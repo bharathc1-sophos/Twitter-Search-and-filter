@@ -1,3 +1,6 @@
+#README.md provided in the folder Twitter-Search-and-filter
+#All interface and running details are also provided in README.md
+
 def tweetprint(tweets):
     for tweet in tweets:
         print (tweet['id']) # This is the tweet's id
