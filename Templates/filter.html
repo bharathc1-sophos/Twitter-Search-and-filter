@@ -28,7 +28,13 @@
             <option value="gt">></option>
             <option value="gte">>=</option>
         </select><br/>   
-        <input name="sort" type="text"  placeholder="sort on"/>
+        sort on
+        <select name="order" >
+            <option value="">None</option>
+			<option value="retweet_count">retweet count</option>
+			<option value="favorite_count">favorite count</option>
+            <option value="user.followers_count">followers count</option>
+        </select>
 		<select name="order" >
 			<option value="1">high to low</option>
 			<option value="-1">low to high</option>
